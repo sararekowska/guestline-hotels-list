@@ -1,5 +1,5 @@
 import { HotelItem } from "./HotelItem";
-import { useListHotels } from "./common/hooks/useListHotels";
+import { useListHotels } from "../common/hooks/useListHotels";
 
 const App = () => {
   const { data } = useListHotels();

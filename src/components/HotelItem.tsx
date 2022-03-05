@@ -1,8 +1,9 @@
-import { Hotel, Room, Images } from "./common/types/types";
-import { useGetHotel } from "./common/hooks/useGetHotel";
+import { Hotel, Room, Images } from "../common/types/types";
+import { useGetHotel } from "../common/hooks/useGetHotel";
 import { Slide } from "react-slideshow-image";
 import "react-slideshow-image/dist/styles.css";
 import { RoomItem } from "./RoomItem";
+import { StarsImg } from "./StarsImg";
 
 const properties = {
   duration: 5000,
@@ -33,7 +34,7 @@ export const HotelItem = ({ hotel }: { hotel: Hotel }) => {
           <p className="text-xl pt-4">{hotel.address1}</p>
           <p className="text-xl">{hotel.address2}</p>
         </div>
-        <div>{hotel.starRating}</div>
+        <StarsImg starRating={hotel.starRating} />
       </div>
       <RoomItem data={data} />
     </section>

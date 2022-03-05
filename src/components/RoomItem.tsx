@@ -1,5 +1,5 @@
-import { Room } from "./common/types/types";
-import { Data } from "./common/types/types";
+import { Room } from "../common/types/types";
+import { Data } from "../common/types/types";
 
 export const RoomItem = ({ data }: { data: Data }) => {
   return (

@@ -2,6 +2,7 @@ import { Hotel, Room, Images } from "./common/types/types";
 import { useGetHotel } from "./common/hooks/useGetHotel";
 import { Slide } from "react-slideshow-image";
 import "react-slideshow-image/dist/styles.css";
+import { RoomItem } from "./RoomItem";
 
 const properties = {
   duration: 5000,
@@ -14,42 +15,27 @@ const properties = {
 
 export const HotelItem = ({ hotel }: { hotel: Hotel }) => {
   const { data } = useGetHotel(hotel.name);
-  console.log(data);
   return (
-    <section className="m-5 border-black border-2">
-      <div className="border-b-2 border-black">
-        <Slide {...properties} className="w-[20rem]">
+    <section className="m-8 border-[#634d44] border-2 bg-[#c3a6a0] rounded-md w-8/12">
+      <div className="flex flex-row p-9">
+        <Slide {...properties} className="w-[15rem]">
           {hotel?.images.map((image: Images) => (
-            // <img src={image.url} alt={image.alt}></img>
-            <div className="each-slide">
+            <div key={hotel.id + "_img"} className="each-slide">
               <div
-                className="h-[20rem] w-[20rem] bg-no-repeat bg-center bg-contain"
+                className="h-[15rem] w-[15rem] bg-no-repeat bg-center bg-cover border-[#634d44] border-2 rounded"
                 style={{ backgroundImage: `url(${image.url})` }}
               ></div>
             </div>
           ))}
         </Slide>
-        {hotel.name}
-        <br />
-        {hotel.address1}
-        <br />
-        {hotel.address2}
-        <br />
-        {hotel.starRating}
+        <div className="w-[70%] pl-8">
+          <h1 className="font-bold text-3xl">{hotel.name}</h1>
+          <p className="text-xl pt-4">{hotel.address1}</p>
+          <p className="text-xl">{hotel.address2}</p>
+        </div>
+        <div>{hotel.starRating}</div>
       </div>
-      <div className="border-b-2 border-black">
-        {data?.rooms.map((room: Room) => (
-          <div>
-            {room.name}
-            <br />
-            {room.occupancy.maxAdults}
-            <br />
-            {room.occupancy.maxChildren}
-            <br />
-            {room.longDescription}
-          </div>
-        ))}
-      </div>
+      <RoomItem data={data} />
     </section>
   );
 };

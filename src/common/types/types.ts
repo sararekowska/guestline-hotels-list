@@ -1,4 +1,7 @@
+import { StringLiteralLike } from "typescript";
+
 export type Hotel = {
+  id: string;
   name: string;
   address1: string;
   address2: string;
@@ -7,6 +10,7 @@ export type Hotel = {
 };
 
 export type Room = {
+  id: string;
   name: string;
   longDescription: string;
   occupancy: {
@@ -18,4 +22,9 @@ export type Room = {
 export type Images = {
   alt?: string;
   url: string;
+};
+
+export type Data = {
+  rooms: [];
+  ratePlans: [];
 };

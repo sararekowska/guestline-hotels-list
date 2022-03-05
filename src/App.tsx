@@ -3,12 +3,10 @@ import { useListHotels } from "./common/hooks/useListHotels";
 
 const App = () => {
   const { data } = useListHotels();
-  console.log(data);
-
   return (
-    <main>
+    <main className="flex flex-col items-center">
       {data?.map((hotel: any) => (
-        <HotelItem hotel={hotel} />
+        <HotelItem key={hotel.id} hotel={hotel} />
       ))}
     </main>
   );

@@ -1,23 +1,17 @@
 import { HotelItem } from "./HotelItem";
-import { useListHotels } from "./useListHotels";
+import { useListHotels } from "./common/hooks/useListHotels";
 
 const App = () => {
-  return <Example />;
-};
-
-function Example() {
   const { data } = useListHotels();
   console.log(data);
 
   return (
-    <section className="pl-4">
-      <ul>
-        {data?.map((hotel: any) => (
-          <HotelItem hotel={hotel} />
-        ))}
-      </ul>
-    </section>
+    <main>
+      {data?.map((hotel: any) => (
+        <HotelItem hotel={hotel} />
+      ))}
+    </main>
   );
-}
+};
 
 export default App;

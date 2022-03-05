@@ -1,9 +1,9 @@
-import { Hotel, Room, Images } from "../common/types/types";
+import { Hotel, Images } from "../common/types/types";
 import { useGetHotel } from "../common/hooks/useGetHotel";
 import { Slide } from "react-slideshow-image";
-import "react-slideshow-image/dist/styles.css";
 import { RoomItem } from "./RoomItem";
 import { StarsImg } from "./StarsImg";
+import "react-slideshow-image/dist/styles.css";
 
 const properties = {
   duration: 5000,

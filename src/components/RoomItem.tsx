@@ -1,10 +1,10 @@
 import { Room } from "../common/types/types";
 import { Data } from "../common/types/types";
 
-export const RoomItem = ({ data }: { data: Data }) => {
+export const RoomItem = (props: { data: Data }) => {
   return (
     <div>
-      {data?.rooms.map((room: Room) => (
+      {props.data?.rooms.map((room: Room) => (
         <div
           key={room.id}
           className="border-t-2 border-[#634d44] p-8 flex flex-row"

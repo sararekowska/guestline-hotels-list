@@ -1,7 +1,7 @@
 import StarFull from "../images/star-full.svg";
 import StarOutline from "../images/star-outline.svg";
 
-export const StarsImg = ({ starRating }: { starRating: string }) => {
+export const HotelStarsImg = ({ starRating }: { starRating: string }) => {
   const fullStars = parseInt(starRating);
   const outlinedStars = 5 - fullStars;
 

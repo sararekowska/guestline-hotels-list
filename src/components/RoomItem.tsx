@@ -1,7 +1,10 @@
+import { useContext } from "react";
 import { Room } from "../common/types/types";
 import { Data } from "../common/types/types";
+import { UIContext } from "./UIContext";
 
 export const RoomItem = (props: { data: Data }) => {
+  const store = useContext(UIContext);
   return (
     <div>
       {props.data?.rooms.map((room: Room) => (

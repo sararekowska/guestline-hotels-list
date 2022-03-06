@@ -2,16 +2,16 @@ import React, { createContext, useState } from "react";
 
 type Setter<T> = React.Dispatch<React.SetStateAction<T>>;
 
-type StoreValue = {
+type StoreValue = Partial<{
   setRating: Setter<number>;
   setMaxAdult: Setter<number>;
   setMaxChild: Setter<number>;
   rating: number;
   maxAdult: number;
   maxChild: number;
-};
+}>;
 
-export const UIContext = createContext<null | StoreValue>(null);
+export const UIContext = createContext<StoreValue>({});
 
 export const UIContextProvider = ({
   children,

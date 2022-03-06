@@ -18,13 +18,13 @@ export const HotelItem = ({ hotel }: { hotel: Hotel }) => {
   const { data } = useGetHotel(hotel.name);
   return (
     <>
-      <section className="m-8 border-[#634d44] border-2 bg-[#c3a6a0] rounded-md w-8/12">
+      <section className="m-8 border-black border-2 bg-white rounded-md w-8/12 shadow-lg shadow-slate-200">
         <div className="flex flex-row p-9">
           <Slide {...properties} className="w-[15rem]">
             {hotel?.images.map((image: Images) => (
               <div key={hotel.id + "_img"} className="each-slide">
                 <div
-                  className="h-[15rem] w-[15rem] bg-no-repeat bg-center bg-cover border-[#634d44] border-2 rounded"
+                  className="h-[15rem] w-[15rem] bg-no-repeat bg-center bg-cover border-black border-2 rounded"
                   style={{ backgroundImage: `url(${image.url})` }}
                 ></div>
               </div>

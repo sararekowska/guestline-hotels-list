@@ -8,7 +8,7 @@ export const Filter = () => {
 
   return (
     <>
-      <section className="flex flex-row justify-evenly items-center bg-[#c3a6a0] w-[35rem] p-4 border-2 border-[#634d44]">
+      <section className="flex flex-row justify-evenly items-center bg-white w-[35rem] p-4 border-2 border-black">
         <div className="flex flex-row">
           <FilterStarsImg starFilter={rating} />
         </div>

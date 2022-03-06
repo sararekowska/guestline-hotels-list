@@ -9,15 +9,15 @@ export const RoomItem = (props: { data: Data }) => {
     <div>
       {props.data?.rooms
         .filter((room: Room) =>
-          maxAdult === 0 && maxChild === 0
+          (maxAdult === 0 && maxChild === 0) || !maxAdult || !maxChild
             ? true
-            : room.occupancy.maxAdults === maxAdult &&
-              room.occupancy.maxChildren === maxChild
+            : room.occupancy.maxAdults >= maxAdult &&
+              room.occupancy.maxChildren >= maxChild
         )
         .map((room: Room) => (
           <div
             key={room.id}
-            className="border-t-2 border-[#634d44] p-8 flex flex-row"
+            className="border-t-2 border-black p-8 flex flex-row"
           >
             <div className="w-[20%] mr-8">
               <h1 className="font-bold text-xl">{room.name}</h1>

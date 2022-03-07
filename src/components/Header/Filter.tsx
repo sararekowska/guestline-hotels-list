@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { FilterStarsImg } from "./FilterStarsImg";
-import { UIContext } from "./UIContext";
+import { UIContext } from "../../common/context/UIContext";
 
 export const Filter = () => {
   const { maxAdult, maxChild, setMaxChild, setMaxAdult, rating, setRating } =

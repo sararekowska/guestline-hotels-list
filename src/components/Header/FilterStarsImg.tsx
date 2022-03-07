@@ -1,7 +1,7 @@
 import { useContext } from "react";
-import StarFull from "../images/star-full.svg";
-import StarOutline from "../images/star-outline.svg";
-import { UIContext } from "./UIContext";
+import StarFull from "../../images/star-full.svg";
+import StarOutline from "../../images/star-outline.svg";
+import { UIContext } from "../../common/context/UIContext";
 
 export const FilterStarsImg = (starFilter: any) => {
   const fullstars = starFilter.starFilter;

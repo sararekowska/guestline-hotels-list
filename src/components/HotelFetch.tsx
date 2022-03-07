@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { Hotel } from "../common/types/types";
 import { HotelItem } from "./HotelItem";
-import { UIContext } from "./UIContext";
+import { UIContext } from "../common/context/UIContext";
 
 export const HotelFetch = ({ data }: { data: any }) => {
   const { rating } = useContext(UIContext);

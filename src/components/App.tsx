@@ -1,7 +1,6 @@
 import { useListHotels } from "../common/hooks/useListHotels";
 import { Header } from "./Header/Header";
 import { UIContextProvider } from "../common/context/UIContext";
-
 import { HotelFetch } from "./HotelFetch";
 
 const App = () => {

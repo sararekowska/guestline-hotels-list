@@ -15,6 +15,7 @@ export const FilterStarsImg = (starFilter: any) => {
           src={fullstars > index ? StarFull : StarOutline}
           className="w-8 h-8"
           onClick={() => setRating?.(index + 1)}
+          alt="star"
         ></img>
       ))}
     </>

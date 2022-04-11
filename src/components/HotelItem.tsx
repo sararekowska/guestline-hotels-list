@@ -26,7 +26,7 @@ export const HotelItem = ({ hotel }: { hotel: Hotel }) => {
                 <div
                   className="h-[15rem] w-[15rem] bg-no-repeat bg-center bg-cover border-black border-2 rounded"
                   style={{ backgroundImage: `url(${image.url})` }}
-                ></div>
+                />
               </div>
             ))}
           </Slide>

@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/guestline-hotels-list/static/css/main.529e9dfe.css",
+    "main.js": "/guestline-hotels-list/static/js/main.f177da74.js",
+    "static/media/star-outline.svg": "/guestline-hotels-list/static/media/star-outline.b3a83040b3471aa435119d45c8731ef8.svg",
+    "static/media/star-full.svg": "/guestline-hotels-list/static/media/star-full.1da64b77a5459b3ae71ad866a56ed002.svg",
+    "index.html": "/guestline-hotels-list/index.html",
+    "main.529e9dfe.css.map": "/guestline-hotels-list/static/css/main.529e9dfe.css.map",
+    "main.f177da74.js.map": "/guestline-hotels-list/static/js/main.f177da74.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.529e9dfe.css",
+    "static/js/main.f177da74.js"
+  ]
+}
